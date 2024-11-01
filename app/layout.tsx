@@ -1,13 +1,5 @@
 import type { Metadata } from "next";
-import { M_PLUS_Rounded_1c } from "next/font/google";
 import "./globals.css";
-
-const mPlusRounded1c = M_PLUS_Rounded_1c({
-  weight: "500",
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-m-plus-rounded-1c",
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,7 +19,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={`${mPlusRounded1c.variable} antialiased`}>
+      <body className="antialiased">
         <main className="flex flex-col items-center justify-between min-h-screen p-8 gap-16 sm:px-20 font-sans">
           {children}
         </main>
