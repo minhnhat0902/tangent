@@ -43,7 +43,7 @@ ce.latexDictionary = [
 
 export default function MathInputAnswer() {
   const mfRef = createRef<MathfieldElement>();
-  const [latex, setLatex] = useState("3x^5 - {2x^2} + x + 4");
+  const [latex, _] = useState("3x^5 - {2x^2} + x + 4");
 
   useEffect(() => {
     if (!mfRef.current) return;

@@ -1,22 +1,22 @@
 "use client";
 
+import Icon from "@/components/Icon";
+import Hint from "@/components/lesson/Hint";
 import Slide from "@/components/lesson/Slide";
 import Text from "@/components/lesson/Text";
-import InputQuestionSubmitButton from "@/components/math/input/InputQuestionSubmit";
-import MultipleChoice from "@/components/math/mcq/MultipleChoice";
-import { MathJax, MathJaxContext } from "better-react-mathjax";
-import { useState } from "react";
-import MultipleChoiceSubmit from "@/components/math/mcq/MultipleChoiceSubmit";
-import { MultipleChoiceProvider } from "@/components/math/mcq/MultipleChoiceContext";
 import { InputQuestionProvider } from "@/components/math/input/InputQuestionContext";
+import InputQuestionSubmitButton from "@/components/math/input/InputQuestionSubmit";
 import MathJaxInputQuestion from "@/components/math/input/MathJaxInputQuestion";
-import { latexCursorString, latexEntryPointString } from "@/utils/serialize";
-import ce from "@/utils/compute-engine/custom-engine";
-import { basicButton, specialButtons } from "@/utils/buttons";
-import Icon from "@/components/Icon";
-import Link from "next/link";
+import MultipleChoice from "@/components/math/mcq/MultipleChoice";
+import { MultipleChoiceProvider } from "@/components/math/mcq/MultipleChoiceContext";
+import MultipleChoiceSubmit from "@/components/math/mcq/MultipleChoiceSubmit";
 import { Button } from "@/components/ui/button";
-import Hint from "@/components/lesson/Hint";
+import { basicButton } from "@/utils/buttons";
+import ce from "@/utils/compute-engine/custom-engine";
+import { latexCursorString, latexEntryPointString } from "@/utils/serialize";
+import { MathJax, MathJaxContext } from "better-react-mathjax";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Page() {
   const [currentSlide, setCurrentSlide] = useState(0);
