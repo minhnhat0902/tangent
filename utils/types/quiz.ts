@@ -1,0 +1,1 @@
+export type AnswerState = "pending" | "correct" | "incorrect";
