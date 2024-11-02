@@ -167,7 +167,7 @@ export default function Page() {
               <Text>
                 Now, let&rsquo;s multiply that with{" "}
                 <MathJax inline>{"\\(\\cos(x^2)\\)"}</MathJax> to get our
-                derivative for <MathJax inline>{"\\(\\cos(x^2)\\)"}</MathJax>.
+                derivative for <MathJax inline>{"\\(\\sin(x^2)\\)"}</MathJax>.
               </Text>
               <MathJaxInputQuestion />
               <InputQuestionSubmitButton

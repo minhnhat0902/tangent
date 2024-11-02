@@ -558,7 +558,14 @@ export default function randomCompositionExpression(): {
   options: MathJaxInputQuestionButton[];
 } {
   const outer = funcDiffRules[randInt(0, funcDiffRules.length)];
-  const inner = funcDiffRules[randInt(0, funcDiffRules.length)];
+  let inner = funcDiffRules[randInt(0, funcDiffRules.length)];
+
+  // Avoiding double exponents confusion
+  if (outer.name === "Power rule" || outer.name === "Derivative of e^x") {
+    while (inner.name === "Power rule" || inner.name === "Derivative of e^x") {
+      inner = funcDiffRules[randInt(0, funcDiffRules.length)];
+    }
+  }
 
   const variable = ["x", "t"][randInt(0, 2)];
   const constant = randInt(2, 8);
@@ -593,7 +600,7 @@ export default function randomCompositionExpression(): {
       if (
         option.type === "dynamic" &&
         buttonOption.type === "basic" &&
-        ce.box(option.value).subs({ _n: constant }).evaluate().latex === 
+        ce.box(option.value).subs({ _n: constant }).evaluate().latex ===
           buttonOption.value
       ) {
         return;

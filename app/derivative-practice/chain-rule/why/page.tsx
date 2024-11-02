@@ -142,7 +142,7 @@ export default function Page() {
                 distance is <MathJax inline>\(g(t)\)</MathJax> and Frank is
                 going twice as fast as George, then what is{" "}
                 <MathJax inline>
-                  {"\\(\\dfrac{\\mathrm{d}f}{\\mathrm{d}g}\\)"}
+                  {"\\(\\frac{\\mathrm{d}f}{\\mathrm{d}g}\\)"}
                 </MathJax>
                 ?
               </Text>
