@@ -42,7 +42,7 @@ export default function Page() {
               }}
             >
               <Text>
-                What&rsquo;s the outside function for{" "}
+                What&rsquo;s the outer function for{" "}
                 <MathJax dynamic inline>
                   {"\\(\\sin(x^2)" + latexEntryPointString + "\\)"}
                 </MathJax>
@@ -130,7 +130,7 @@ export default function Page() {
             >
               <Text>
                 There&rsquo;s just one more step we need to do, which is to
-                multiply what we just got by the derivative of the inside
+                multiply what we just got by the derivative of the inner
                 function.
               </Text>
               <Text>
